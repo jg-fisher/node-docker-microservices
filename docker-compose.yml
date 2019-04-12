@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  order_service:
+    build: ./orderservice # location of the Dockerfile for the service
+    #volumes: # volume mappings (folder mapppings)
+    #  - ./orderservice:/usr/src/app
+    ports: # port mappings
+      - 3000:3000
+  user_service:
+    build: ./userservice
+    #volumes:
+    #- ./userservice:/usr/src/app
+    ports: # port mappings
+      - 3001:3001
+  
+  
